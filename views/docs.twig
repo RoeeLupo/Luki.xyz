@@ -1,0 +1,121 @@
+{% extends 'templates/head.twig' %}
+
+{% block body %}
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+       <header class=header id=header>
+       <div class=container>
+       <div class=branding>
+       <h1 class=logo><a href=/><span aria-hidden=true></span> <span class=text-highlight>LUKI</span><span class=text-bold>DOCUMENTATION</span></a></h1></div>
+       <ol class=breadcrumb>
+       <li><a href=/>Home</a>
+       <li class=active>Documentation</ol>
+       </div>
+       </header>
+
+
+
+
+
+          <div class=doc-wrapper>
+                    <div class=container>
+                        <div class="text-center doc-header" id=doc-header>
+                            <h1 class=doc-title>Documentation</h1>
+                            <div class=meta><i class="fa fa-clock-o"></i> Last updated: June 3rd, 2018</div>
+                        </div>
+                        <div class=doc-body>
+                            <div class=doc-content>
+                                <div class=content-inner>
+                                    <section class=doc-section id=intro>
+                                        <h2 class=section-title>Intro</h2>
+                                        <div class=section-block>
+                                            <p>This documentation explains how to setup Luki to your server, If you still need help feel free to join the <a href="https://luki.xyz/support">official support server</a>.</div>
+                                    </section>
+                                    <section class=doc-section id=setup>
+                                        <h2 class=section-title>Setup</h2>
+                                        <div class=section-block id=logs>
+                                            <h3 class=block-title>Logs</h3>
+                                            <p>
+                                                <div class=code-block>
+                                                    <h6>Set Mod-log and Server-log:</h6>
+                                                    <p><code>l.mod-log #channel</code>
+                                                        <p><code>l.server-log #channel</code></div>
+                                        </div>
+                                        <div class=section-block id=welcomegoodbye>
+                                            <h3 class=block-title>Welcome/Goodbye messages</h3>
+                                            <div class=code-block>
+                                                <h6>Welcome:</h6>
+                                                <p><code>l.welcome</code>
+                                                    <p><code>l.welcome-text text (add #user# for username)</code>
+                                                        <p><code>l.welcome-channel #channel</code>
+                                                            <h6>Goodbye:
+                                                                <p>
+                                                                    <p><code>l.goodbye</code></p>
+                                                                    <p><code>l.goodbye-text text (add #user# for username)</code></p>
+                                                                    <p><code>l.goodbye-channel #channel</code></p>
+                                            </div>
+                                            <div class=section-block id=leveling>
+                                                <h3 class=block-title>Leveling system</h3>
+                                                <h6>Disable/Enable the leveling system:</h6>
+                                                <code>l.levels</code>
+                                            </div>
+                                            <div class=code-block>
+                                            </div>
+                                            <div class=section-block id=automod>
+                                                <h3 class=block-title>Automod</h3>
+                                                <p>
+                                                    <div class=code-block>
+                                                        <h6>Set invite links filter:</h6>
+                                                        <p><code>l.invite-filter on/off</code>
+                                                            <h6>Set all links filter:</h6>
+                                                            <p><code>l.links-filter on/off</code>
+															<h6>Set black words filter:</h6>
+                                                            <p><code>l.links-filter on/off</code>
+                                                    </div>
+                                                    <div class=section-block id=general>
+                                                        <div class=code-block></div>
+                                                        <div class=code-block></div>
+                                                    </div>
+                                    </section>
+
+
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar hidden-xs">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
+ <li><a href=#intro class=scrollto>Intro</a>
+                                        <li><a href=#setup class=scrollto>Setup</a>
+                                            <ul class="nav doc-sub-menu">
+                                                <li><a href=#logs class=scrollto>Logs</a>
+                                                    <li><a href=#welcomegoodbye class=scrollto>Welcome/Goodbye messages</a>
+                                                        <li><a href=#leveling class=scrollto>Leveling system</a>
+                                                            <li><a href=#automod class=scrollto>Automod</a></ul>
+                              </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+
+
+
+    </div><!--//page-wrapper-->
+
+        <div class="container">
+            <h5 class="copyright">Copyright © 2018 <a href="https://mrsheldon.me" targe="_blank">Roy Lupo</a> All Rights Reserved</h5>
+
+
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="https://luki.xyz/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/js/main.js"></script>
+{% endblock %}

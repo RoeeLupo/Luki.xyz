@@ -1,0 +1,231 @@
+{% extends 'templates/head.twig' %}
+
+{% block body %}
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+       <header class=header id=header>
+       <div class=container>
+       <div class=branding>
+       <h1 class=logo><a href=/><span aria-hidden=true></span> <span class=text-highlight>LUKI</span><span class=text-bold>COMMANDS</span></a></h1></div>
+       <ol class=breadcrumb>
+       <li><a href=/>Home</a>
+       <li class=active>Commands</ol>
+       </div>
+       </header>
+
+
+
+
+
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"></i> Commands</h1>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <div class="section-block">
+                                    <div class=section-block id=fun>
+                                    <h1>Fun</h1>
+                                    <p><code>l.meme</code> random meme</p>
+                                    <p><code>l.slap</code> slap someone</p>
+                                    <p><code>l.hug</code> hug someone</p>
+                                    <p><code>l.cat</code> send cat image</p>
+                                    <p><code>l.dog</code> send dog image</p>
+                                    <p><code>l.flipcoin</code> Returns "Heads" or "Tails"</p>
+                                    <p><code>l.urban [word]</code> Pulls information from Urban Dictionary about the word requested.</p>
+                                    <p><code>l.cnjoke</code> tell chuck norris joke</p>
+                                    <p><code>l.dadjoke</code> tell dad joke</p>
+                                    <p><code>l.jeff</code> My name is jeff</p>
+                                    <p><code>l.ascii [text]</code> just an ascii command</p>
+                                    <p><code>l.richembed "title" "imageURL" "hex color" "description"</code> create embed message</p>
+                                    <p><code>l.8ball [question]</code> ask the 8ball!</p>
+                                    <p><code>l.trump</code> Sends a random quote from everybody's favorite president</p>
+                                    <div class=section-block id=imageediting>
+                                    <h1>Image Editing</h1>
+                                    <p><code>l.continued [@user]</code> Makes avatar into a to be continued meme</p>
+                                    <p><code>l.pixel [@user]</code> Applies the pixel effect to the avatar of user.</p>
+                                    <p><code>l.achievement "title" "description"</code> create a Image with a look of minecraft achievement</p>
+                                    <p><code>l.jail [@user]</code> put jail bars over mentioned user's profile picture</p>
+                                    <p><code>l.shit [@user]</code> Put mentioned uesr's profile picture in shit comic</p>
+                                    <p><code>l.beautiful [@user]</code> Put mentioned user's profile picture in beautiful photo</p>
+                                    <p><code>l.jesus [@user]</code> Put mentioned user's profile picture in jesus photo</p>
+                                    <p><code>l.wasted [@user]</code> Applies GTA V wasted effect to the avatar of the mentioned user</p>
+                                    <p><code>l.delmeme [@user]</code> PLEASE DON'T DELETE THE MEME!</p>
+                                    <div class=section-block id=music>
+                                    <h1>Music</h1>
+                                    <p><code>l.play [song name]</code> Add new song to the queue
+                                    <p><code>l.stop</code> Stop the music
+                                    <p><code>l.skip</code> Skip 1 song from the queue
+                                    <p><code>l.resume</code> Resume the music
+                                    <p><code>l.pause</code> Pause the music
+                                    <p><code>l.connect</code> Connect to author's voice channel
+                                    <p><code>l.disconnect</code> Disconnect from the voice channel
+                                    <p><code>l.volume [1-100]</code> Change the volume
+                                    <div class=section-block id=information>
+                                    <h1>Information</h1>
+                                    <p><code>l.userinfo [@user]</code> Info about the mentioned user
+                                    <p><code>l.serverinfo</code> Info about the currect server
+                                    <p><code>l.roleinfo [@role]</code> Info about the mentioned role
+                                    <p><code>l.channelinfo [#channel]</code> Info about the mentioned channel
+                                    <p><code>l.roleid [@role]</code> say the mentioned role ID
+                                    <p><code>l.memberid [@user]</code> say the mentioned user ID
+                                    <p><code>l.membercount</code> say how many members there is in the correct server
+                                    <div class=section-block id=moderation>
+                                    <h1>Moderation</h1>
+                                    <p><code>l.purge [1-100]</code> Delete amount of messages
+                                    <p><code>l.ban [@user] [reason]</code> ban user with mention
+                                    <p><code>l.hackban [userID] [reason]</code> ban user with id
+                                    <p><code>l.kick [@user] [reason]</code> kick user
+                                    <p><code>l.warn [@user] [reason]</code> warn user
+                                    <p><code>l.warnings [@user]</code> Display warnings of specific user
+                                    <p><code>l.clearwarns [@user] [reason]</code> Clear all warnings of specific user
+                                    <p><code>l.mute [@user] [reason]</code> Mute user
+                                    <p><code>l.unmute [@user] [reason]</code> Unmute user
+                                    <div class=section-block id=rolecontrol>
+                                    <h1>Role Control</h1>
+                                    <p><code>l.addrole [rolename]</code> add role
+                                    <p><code>l.delrole [@rolename]</code> delete role
+                                    <p><code>l.mutedrole</code> Create Muted role (need it for the mute command)
+                                    <div class=section-block id=channelcontrol>
+                                    <h1>Channel Control</h1>
+                                    <p><code>l.addtextchannel "name" "topic"</code> Create text channel
+                                    <p><code>l.addvoicechannel "name"</code> create voice channel
+                                    <p><code>l.addcategory "name"</code> create category
+                                    <div class=section-block id=social>
+                                    <h1>Social</h1>
+                                    <p><code>l.profile [@user]</code> Display user's profile
+                                    <p><code>l.settitle text</code> Set your profile title
+                                    <p><code>l.setbio text</code> Set your profile bio<div class=section-block id=games>
+                                    <h1>Games</h1>
+                                    <p><code>l.osu [user]</code> osu! stats
+                                    <p><code>l.fortnite [user]</code> fortnite stats
+                                    <p><code>l.roblox [user]</code> Roblox stats
+                                    <p><code>l.mcserver [IP]</code> Minecraft server stats
+                                    <p><code>l.mcskin [user]</code> 3D Skin of Minecraft user
+                                    <p><code>l.mcavatar [user]</code> Avatar of Minecraft user
+                                    <p><code>l.ow [PC/XBL/PSN] [US/EU/KR/CN/GLOBAL] [btag-0000]</code> Overwatch stats
+                                    <p><code>l.bedwars [username]</code> bedwars stats from Hypixel
+                                    <div class=section-block id=globalleveling>
+                                    <h1>Global Leveling</h1>
+                                    <p><code>l.lvlsinfo</code> Information about the leveling system
+                                    <p><code>l.level [@user]</code> Show your level or someone else level
+                                    <div class=section-block id=economy>
+                                    <h1>Economy</h1>
+                                    <p><code>l.bank</code> Help menu of the bank system
+                                    <p><code>l.pay [@user] [1-10000]</code> Pay other user amount of money
+                                    <p><code>l.work</code> Work for $200 (can be used every 1 hour)
+                                    <p><code>l.freecash</code> Free cash (can be used once)
+                                    <p><code>l.slots</code> Spin the slots mechine
+                                    <p><code>l.coin</code> Flip the coin
+                                    <div class=section-block id=general>
+                                    <h1>General</h1>
+                                    <p><code>l.help</code> Lists available commands
+                                    <p><code>l.invite</code> For invite me
+                                    <p><code>l.links</code> For all the links
+                                    <p><code>l.about</code> About Luki
+                                    <p><code>l.avatar [@user]</code> Get the mention user avatar
+                                    <p><code>l.announce [#channel] [message]</code> create embed announcement
+                                    <p><code>l.poll [Question]</code> Create a poll
+                                    <p><code>l.bugreport [the bug]</code> Found a bug? Please let us now
+                                    <p><code>l.botinfo [website] [botID]</code> Information about bot, work only if he listed on discordbots.org, ls.terminal.ink or botsfordiscord.com
+                                    <p><code>l.weather [location name]</code> A weather command
+                                    <p><code>l.imdb [movie name]</code> Info about movie from IMDb
+                                    <p><code>l.report [@user] [reason]</code> submit report and send it to the currect server's owner
+                                    <p><code>l.say [text]</code> just a say command
+                                    <p><code>l.bitcoin</code> bitcoin rates
+                                    <p><code>l.suggest [text]</code> post suggestion in "suggestions" channel (works on if this channel exists)
+                                    <p><code>l.color</code> Generate random color
+                                    <p><code>l.translate [lang code] [content]</code> Translate content to selected language
+                                    <p><code>l.lang-codes</code> list of languages
+                                    <p><code>l.bitly [link]</code> Bit.ly URL Shortener
+                                    <div class=section-block id=automod>
+                                    <h1>Automod</h1>
+                                    <p><code>l.invite-filter [on/off]</code> Turn on or off the invite links filter
+                                    <p><code>l.links-filter [on/off]</code> Turn on or off the links filter
+                                    <p><code>l.badwords-filter [on/off]</code> Turn on or off the bad words filter<div class=section-block id=serversettings>
+                                    <h1>Server Settings</h1>
+                                    <p><code>l.levels disable/enable</code> the leveling system
+                                    <p><code>l.welcome disable/enable</code> the welcome message
+                                    <p><code>l.goodbye disable/enable</code> the goodbye message
+                                    <p><code>l.welcome-text [text]</code> set the welcome message
+                                    <p><code>l.goodbye-text [text]</code> set the goodbye message
+                                    <p><code>l.welcome-channel [#channel]</code> set the welcome channel
+                                    <p><code>l.goodbye-channel [#channel</code> set the goodbye channel
+                                    <p><code>l.mod-log [#channel / off]</code> set mod-log or turn mod-log off
+                                    <p><code>l.server-log [#channel / off]</code> set server-log or turn server-log off
+                                    <div class=section-block id=youtubers>
+                                    <h1>For Youtubers</h1>
+                                    <p><code>l.newvideo [video URL] [icon URL] [name]</code> create new video announcement
+                                    <p><code>l.newlive [live URL] [icon URL] [name]</code> create new live announcement
+                                    <div class=section-block id=nsfw>
+                                    <h1>NSFW</h1>
+                                    <p><code>l.pussy</code> send pussy image
+                                    <p><code>l.ass</code> send ass image
+                                    <p><code>l.anal</code> send anal image
+                                    <p><code>l.porngif</code> send porn gif
+                                    <p><code>l.4kporn</code> send 4k porn image
+                                    <p><code>l.hentai</code> send hentai image
+                                    <p><code>l.holo</code> send holo image
+                                    <p><code>l.lewd</code> send lewd image
+                                    <p><code>l.lewdneko</code> send lewdneko image
+                                    <p><code>l.thigh</code> send thigh image
+
+                                             <div id="stats"  class="section-block">
+
+
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar hidden-xs">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
+<li><a href=#fun class=scrollto>Fun</a>
+<li> <a href=#imageediting class=scrollto>Image Editing</a>
+<li><a href=#music class=scrollto>Music</a>
+<li><a href=#information class=scrollto>Information</a>
+<li><a href=#moderation class=scrollto>Moderation</a>
+<li><a href=#rolecontrol class=scrollto>Role Control</a>
+<li><a href=#channelcontrol class=scrollto>Channel Control</a>
+<li><a href=#social class=scrollto>Social</a>
+<li><a href=#games class=scrollto>Games</a>
+<li><a href=#globalleveling class=scrollto>Global Leveling</a>
+<li><a href=#economy class=scrollto>Economy</a>
+<li><a href=#general class=scrollto>General</a>
+<li><a href=#automod class=scrollto>Automod</a>
+<li><a href=#serversettings class=scrollto>Server Settings</a>
+<li><a href=#youtubers class=scrollto>For Youtubers</a>
+<li><a href=#nsfw class=scrollto>NSFW</a></ul>
+                              </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+
+
+
+    </div><!--//page-wrapper-->
+
+        <div class="container">
+            <h5 class="copyright">Copyright © 2018 <a href="https://mrsheldon.me" targe="_blank">Roy Lupo</a> All Rights Reserved</h5>
+
+
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="https://luki.xyz/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/js/main.js"></script>
+{% endblock %}

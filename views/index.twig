@@ -1,0 +1,152 @@
+{% extends 'templates/head.twig' %}
+
+{% block body %}
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="/">
+                            <span aria-hidden="true" ></span>
+                            <span class="text-highlight">LUKI</span><span class="text-bold">THE BOT</span>
+
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+																<h4 class="header-stat">
+Currently serving
+<span id="guild-count">2000+</span>
+Discord servers
+</h4>
+<script>
+    var request = new XMLHttpRequest();
+    request.open('GET', 'https://discordbots.org/api/bots/365958655926992896/stats?_', true);
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+            var data = JSON.parse(request.responseText);
+            document.getElementById("guild-count").innerText = data['server_count'].toLocaleString();
+        }
+    };
+    request.onerror = function(){};
+    request.send();
+</script>
+
+
+
+            </div><!--//container-->
+        </header><!--//header-->
+
+
+
+
+
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"></i> Luki</h1>
+                    <div class="meta"></i> Yet another discord bot</div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <div class="section-block">
+                                    <p>Luki is an easy-to-use bot with commands that can be used for fun, moderation, music, games, profiles, leveling system, magic 8ball, fun commands, mod-log, server-log, high-level moderation, information, game statics, cleverbot and more!
+                                    </p>
+                                    <a href="https://discordapp.com/oauth2/authorize?client_id=365958655926992896&scope=bot&permissions=2146958591" class="btn btn-green" target="_blank"></i> Invite Luki</a>       <a href="https://discordapp.com/invite/76PAmCv" class="btn btn-green" target="_blank"></i> Support Guild</a>
+                            <section id="info" class="doc-section">
+                                <h2 class="section-title"></h2>
+                                <div id="about"  class="section-block">
+                                    <h3 class="block-title">About</h3>
+                                    <p>
+                                    </p>
+                                    <div class="code-block">
+ <p>
+Luki started at the end of 2017 as MrSheldon’s project called DeadlyBot, After a few weeks his name changed to Luki. with time Luki started to collect servers, when today it is found in more than <span id="guild-count">2000</span> servers. At the end of January 2018, another developer joined, Ofir#0011.
+
+Luki’s goal has always been to be a bot that has everything, We do not ask for money to use it, there’s no such thing as premium versions, it’s all totally free and that’s how it will stay.
+
+If so, you are welcome to donate to Luki development team through <a href="https://patreon.com/MrSheldon">Patreon</a> or <a href="https://paypal.me/LukiTheBot">Paypal</a>
+</p>                                    </div><!--//code-block-->
+                                </div><!--//
+								section-block-->
+                                <div id="faq"  class="section-block">
+                                    <h3 class="block-title">FAQ</h3>
+									  <div class="code-block">
+ <p>
+<h4 ><i class="fa fa-question-circle"></i> How can I see list of commands?</h3>
+<p>By using l.help on Discord or on the <a href="commands">commands page </a>
+</p>
+<h4><i class="fa fa-question-circle"></i> What lib Luki is using?</h4>
+<p>Custom lib made by MrSheldon (Luki.js)
+</p>
+<h4><i class="fa fa-question-circle"></i> How do I become moderator on the support server?</h4>
+<p>Be active, help peoples and the manager will choose you
+</p>
+<h4><i class="fa fa-question-circle"></i> Is Luki open-source?</h4>
+<p>No, Luki isn’t open-source project and the source code isn’t public
+</p>
+                        </div><!--//code-block-->
+
+                                <div id="links"  class="section-block">
+                                    <h3 class="block-title">Links</h3>
+
+ <a href="https://discordapp.com/oauth2/authorize?client_id=365958655926992896&scope=bot&permissions=2146958591" class="btn btn-green" target="_blank"></i> Invite Luki</a>
+
+										 <a href="https://discordapp.com/invite/76PAmCv" class="btn btn-green" target="_blank"></i> Support Server</a>
+
+										   <a href="https://discordbots.org/bot/luki" class="btn btn-green" target="_blank"></i> Discordbots.org</a>
+
+											<a href="https://botsfordiscord.com/bot/365958655926992896/" class="btn btn-green" target="_blank"></i> Botsfordiscord.com</a>
+
+
+                                             <div id="stats"  class="section-block">
+
+
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar hidden-xs">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
+<li><a class="scrollto" href="#faq">FAQ</a></li>
+<li><a class="scrollto" href="#links">Links</a></li>
+<li><a href="/commands">Commands</a></li>
+<li><a href="/docs">Docs</a></li>
+<li><a href="/team">Our Team</a></li>
+<li><a href="/status">Status</a></li>
+<li><a href="https://discord.gg/76PAmCv">Community</a></li>
+<li><a href="/tos">Terms Of Service</a></li>
+<li><a href="/privacypolicy">Privacy Policy</a></li>
+                              </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+
+
+
+    </div><!--//page-wrapper-->
+
+        <div class="container">
+            <h5 class="copyright">Copyright © 2018 <a href="https://mrsheldon.me" targe="_blank">Roy Lupo</a> All Rights Reserved</h5>
+
+
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="https://luki.xyz/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="https://luki.xyz/js/main.js"></script>
+{% endblock %}
